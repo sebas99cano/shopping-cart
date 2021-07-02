@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
+import 'semantic-ui-css/semantic.min.css'
 
 import '../index.css'
 import {_getPhones} from '../utils/_DATA'
 import {receivePhones} from '../actions/phones'
 import Container from './container'
-
-import 'semantic-ui-css/semantic.min.css'
 
 
 class App extends Component {
@@ -18,18 +17,12 @@ class App extends Component {
     }
 
     render() {
-        const {phones} = this.props
 
         return (
-            <Container phones={phones}/>
+            <Container/>
         );
     }
 }
 
-function mapStateToProps({phones}) {
-    return {
-        phones
-    }
-}
 
-export default connect(mapStateToProps)(App);
+export default connect()(App);

@@ -1,28 +1,16 @@
 export const RECEIVE_PHONES = 'RECEIVE_PHONES'
-export function receivePhones(phones){
-    return{
+export const MOVE_INCART = 'MOVE_INCART'
+
+export function receivePhones(phones) {
+    return {
         type: RECEIVE_PHONES,
         phones
     }
 }
-/*
-export function _getPhones (){
-    return new Promise((res, rej) =>{
-        setTimeout(() => res({...phones
-        }), 1000);
-    });
-}export function setInCart({id, inCart}){
-    return new Promise((res, rej) =>{
-        setTimeout(() =>{
-            phones = {
-                ...phones,
-                id :{
-                    ...phonesid ,
-                    inCart: inCart
-                }
-            }
-            res()
-        }, 500);
-    });
+
+export function moveIncart(phone_id) {
+    return {
+        type: MOVE_INCART,
+        id: phone_id
+    }
 }
-*/
