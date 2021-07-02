@@ -6,6 +6,8 @@ import {_getPhones} from '../utils/_DATA'
 import {receivePhones} from '../actions/phones'
 import Container from './container'
 
+import 'semantic-ui-css/semantic.min.css'
+
 
 class App extends Component {
     componentDidMount() {
